@@ -11,6 +11,7 @@
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
+    /* where to change the width of the columns on desktop view */
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
 }
@@ -27,21 +28,21 @@ grid-template-areas:
     "a a";
 }
 
-.history {
+#history {
 grid-area: h;
 }
 
-.variations{
+#variations{
 grid-area: v;
 }
 
-.alphabet {
+#alphabet {
 grid-area: a;
 }
 }
 /* CSS for the footer */
 footer{
-    background-color: gray;
+    background-color: rgb(30, 30, 30);
 }
 
 /* variable font animation */
