@@ -6,8 +6,9 @@
     }
     
     body{
-    background-color: lightsteelblue;
+    background-color: #181818;
     font-family: 'Roboto Flex', sans-serif;
+    color:#E2E2E2;
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
@@ -15,6 +16,19 @@
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
 }
+/* typographic styling for mobile */
+@media only screen and (max-width:100px){
+   
+    h4{
+        font-size:100px;
+        font-weight:20; 
+        text-align: center;
+        animation: weightChange 7s infinite;
+        font-family: 'Roboto Flex', sans-serif;
+    }
+    
+}
+
 /* how the page wrapper appears on desktop */
 
 @media only screen and (min-width:800px){
@@ -24,9 +38,10 @@ grid-gap: 25px;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 grid-template-areas: 
-    "h v"
-    "a a";
+    "h a"
+    "v a";
 }
+
 
 #history {
 grid-area: h;
@@ -42,15 +57,35 @@ grid-area: a;
 }
 /* CSS for the footer */
 footer{
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(199, 30, 143);
+    font-family: 'Roboto Flex', sans-serif;
+    height:90%;
+    width:auto;
 }
 
 /* variable font animation */
-h3{
+.hero {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 10px;
+}
+
+.variations {
+    text-align: center;
+}
+h1{
+    font-size: 100px;
+    font-weight: 20; 
+    text-align: center;
+    animation: weightChange 7s infinite;
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+h4{
+    font-size:400px;
     font-weight:20; 
     text-align: center;
-    font-size: 5em;
     animation: weightChange 7s infinite;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 @keyframes weightChange {
