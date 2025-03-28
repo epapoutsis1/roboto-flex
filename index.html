@@ -10,6 +10,7 @@
 </head>
 <body>
   <div id="cursor"></div>
+  <div class="ripple" style="top: 100px; left: 200px;"></div>
     <header>
         <h1 class="logo">ROBOTO FLEX</h1>
           <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
@@ -94,11 +95,12 @@
           </footer>
 
 </body>
-
-<script>src="animation.js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="animation.js"></script>
 <script>
   let cursor = document.querySelector('#cursor');
   let body = document.querySelector('body');
+  
 
   document.addEventListener('mousemove', (e) => { 
       body.style.backgroundPositionX = e.pageX / -4 + 'px';

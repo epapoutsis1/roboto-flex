@@ -375,3 +375,24 @@ body {
     z-index: 9999; /* Ensures it appears above all other elements */
     transform: translate(-50%, -50%); /* Centers the cursor on the mouse pointer */
 }
+
+/* Ripple effect styles */
+.ripple {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 255, 179, 0.5); /* Neon green glow */
+    border-radius: 50%; /* Circular shape */
+    pointer-events: none; /* Prevents interference with mouse events */
+    transform: scale(0); /* Start small */
+    animation: rippleEffect 0.6s ease-out; /* Animate the ripple */
+    z-index: 9998; /* Ensure it appears below the cursor */
+}
+
+/* Ripple animation */
+@keyframes rippleEffect {
+    to {
+        transform: scale(4); /* Expand the ripple */
+        opacity: 0; /* Fade out the ripple */
+    }
+}
