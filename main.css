@@ -10,6 +10,13 @@
     font-family: 'Roboto Flex', sans-serif;
     color:#E2E2E2;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow:auto;
+}
+
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
     /* where to change the width of the columns on desktop view */
@@ -30,9 +37,10 @@
 }
 
 .variations h4 {
-    font-size: 200px;
+    margin: 10px 0; /* Reduce vertical spacing between elements */
+    font-size: 100px; /* Keep the font size consistent */
+    text-align: center; /* Center-align the text */
 }
-
 /* how the page wrapper appears on desktop */
 
 @media only screen and (min-width:800px){
@@ -46,6 +54,13 @@ grid-template-areas:
     "v a";
 }
 
+#history {
+    position: static; /* Ensure it stays in its default position */
+    margin: 0 auto; /* Center it horizontally if needed */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    text-align: center; /* Center-align the text */
+}
 
 #history {
 grid-area: h;
@@ -63,7 +78,7 @@ grid-area: a;
 footer{
     background-color: rgb(199, 30, 143);
     font-family: 'Roboto Flex', sans-serif;
-    height:90%;
+    height:100px;
     width:auto;
 }
 
@@ -73,17 +88,221 @@ footer{
     font-size: 10px;
 }
 
-.variations {
-    text-align: center;
-}
-h1{
-    font-size: 100px;
-    font-weight: 20; 
-    text-align: center;
-    animation: weightChange 7s infinite;
+.opticalSize {
     font-family: 'Roboto Flex', sans-serif;
-
+    font-size: 200px;
+    text-align: center;
+    animation: opticalSizeAnimation 7s infinite;
 }
+
+@keyframes opticalSizeAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.weight {
+    font-family: "Roboto Flex";
+    font-size: 200px;
+    text-align: center;
+    color:red;
+    animation: weightAnimation 7s infinite;
+  
+}
+
+@keyframes weightAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 16, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 27,
+         "YOPQ" 135, "XTRA" 603, "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.grade {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes gradeAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.width {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: widthAnimation 7s infinite;
+}
+
+@keyframes widthAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 25, "slnt" 0, "XOPQ" 27, "YOPQ" 100, "XTRA" 500, "YTUC" 500, "YTLC" 500, "YTAS" 649, "YTDE" 100, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 100, "XTRA" 500 "YTUC" 500, "YTLC" 500, "YTAS" 649, "YTDE" 100, "YTFI" 560;
+    }
+    
+}
+
+.slant {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes slantAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.parametricThinStroke {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes parametricThinStrokeAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.parametricCounterWidth {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes parametricCounterWidthAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.parametricUppercaseHeight {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes parametricUppercaseHeightAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.parametricLowercaseHeight {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes parametricLowercaseHeightAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.parametricAscenderHeight {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes parametricAscenderHeightAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.parametricDescenderDepth {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes parametricDescenderDepthAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+.parametricFigureHeight {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    animation: weightAnimation 7s infinite;
+}
+
+@keyframes parametricFigureHeightAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+    }
+    
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 20; 
+    font-style:bold;
+    text-align: center;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
 h4{
     font-size:400px;
     font-weight:20; 
@@ -98,11 +317,24 @@ h4{
     }
     50%{font-variation-settings: "opsz" 16, "wght" 900, "slnt" -13;
     }
-    
 }
+
+.variations {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    gap: 20px; /* Reduce spacing between items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 10px auto; /* Adjust spacing around the container */
+    padding: 10px; /* Adjust padding inside the container */
+}
+.variations {
+    border: 2px solid red;
+}
+
 /* variable font that changes on hover */
 .variable-font{
-    font-weight:1 ;
+    font-weight:1;
     height:100vh;
     font-size: 10em;
     display:grid;
@@ -126,3 +358,20 @@ h4{
     font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
 }
 
+/* Hide the default mouse pointer */
+body {
+    cursor: none;
+}
+
+/* Style the custom cursor */
+#cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 255, 179, 0.8); /* Neon green */
+    border-radius: 50%; /* Circular shape */
+    box-shadow: 0 0 15px rgba(0, 255, 179, 0.8), 0 0 30px rgba(0, 255, 179, 0.5); /* Neon glow effect */
+    pointer-events: none; /* Prevents interference with mouse events */
+    z-index: 9999; /* Ensures it appears above all other elements */
+    transform: translate(-50%, -50%); /* Centers the cursor on the mouse pointer */
+}

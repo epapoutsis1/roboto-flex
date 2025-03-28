@@ -9,6 +9,7 @@
     <title>Roboto Flex - Variable Font</title>
 </head>
 <body>
+  <div id="cursor"></div>
     <header>
         <h1 class="logo">ROBOTO FLEX</h1>
           <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
@@ -17,7 +18,6 @@
                       <li><a href="#history">History</a></li>
                       <li><a href="#variations">Variations</a></li>
                       <li><a href="#alphabet">Full character set</a></li>
-                      
                   </ul>
               </nav>
        <label for="nav-checkbox" class="nav-checkbox-icon">
@@ -38,19 +38,44 @@
                   <h1>a breakdown of what can be changed on the variable font</h1>
                 </section>
 
-        <section class="variations">
-          <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-                <h4>FLEX</h4>
-        </section>
+        <section id="variation">
+   
+          <h4 class="opticalSize">FLEX</h4>
+  
+     
+          <h4 class="weight" >FLEX</h4>
+       
+              
+          <h4 class="grade">FLEX</h4>
+        
+
+          <h4 class="width">FLEX</h4>
+     
+
+          <h4 class="slant">FLEX</h4>
+  
+  
+          <h4 class="parametricThinStroke">FLEX</h4>
+  
+
+          <h4 class="parametricCounterWidth">FLEX</h4>
+       
+
+          <h4 class="parametricUppercaseHeight">FLEX</h4>
+      
+
+          <h4 class="parametricLowercaseHeight">FLEX</h4>
+   
+
+          <h4 class="parametricAscenderHeight">FLEX</h4>
+
+
+          <h4 class="parametricDescenderDepth">FLEX</h4>
+        
+
+          <h4 class="parametricFigureHeight">FLEX</h4>
+      
+         </section>
 
           <section id="alphabet">
             <h1>Full character set</h1>
@@ -69,4 +94,17 @@
           </footer>
 
 </body>
+
+<script>src="animation.js"</script>
+<script>
+  let cursor = document.querySelector('#cursor');
+  let body = document.querySelector('body');
+
+  document.addEventListener('mousemove', (e) => { 
+      body.style.backgroundPositionX = e.pageX / -4 + 'px';
+      body.style.backgroundPositionY = e.pageY / -4 + 'px';
+      cursor.style.top = e.pageY + 'px';
+      cursor.style.left = e.pageX + 'px';
+  });
+</script>
 </html>
