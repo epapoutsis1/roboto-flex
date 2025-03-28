@@ -309,6 +309,7 @@ h4{
     text-align: center;
     animation: weightChange 7s infinite;
     font-family: 'Roboto Flex', sans-serif;
+    margin-top:15%;
 }
 
 @keyframes weightChange {
@@ -322,14 +323,10 @@ h4{
 .variations {
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-    gap: 20px; /* Reduce spacing between items */
+    gap: 10px; /* Reduce spacing between items */
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     margin: 10px auto; /* Adjust spacing around the container */
-    padding: 10px; /* Adjust padding inside the container */
-}
-.variations {
-    border: 2px solid red;
 }
 
 /* variable font that changes on hover */
@@ -396,3 +393,4 @@ body {
         opacity: 0; /* Fade out the ripple */
     }
 }
+

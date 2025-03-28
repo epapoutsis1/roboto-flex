@@ -13,8 +13,8 @@ cursorStyle.innerHTML += `
 
   #cursor {
     position: fixed;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: rgba(0, 255, 179, 0.8); /* Neon green */
     border-radius: 50%; /* Circular shape */
     pointer-events: none; /* Prevents interference with mouse events */
@@ -73,5 +73,4 @@ document.addEventListener('click', (e) => {
     ripple.remove();
   }, 600); // Match the duration of the ripple animation
 });
-
 
