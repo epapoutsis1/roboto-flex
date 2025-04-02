@@ -22,12 +22,13 @@ html, body {
     /* where to change the width of the columns on desktop view */
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
+    text-align:left;
 }
 /* typographic styling for mobile */
 
 @media only screen and (max-width:800px){
 
-    .hero h4{
+    .hero h3{
         font-size:200px;
         font-weight:20;
         text-align: center;
@@ -68,6 +69,9 @@ grid-area: h;
 
 #variations{
 grid-area: v;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto;
 }
 
 #alphabet {
@@ -90,207 +94,222 @@ footer{
 
 .opticalSize {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
     animation: opticalSizeAnimation 7s infinite;
 }
 
 @keyframes opticalSizeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 8, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 144, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC"416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .weight {
     font-family: "Roboto Flex";
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
     color:red;
     animation: weightAnimation 7s infinite;
-  
 }
 
 @keyframes weightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 16, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 27,
-         "YOPQ" 135, "XTRA" 603, "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 16, "wght" 1000, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .grade {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: gradeAnimation 7s infinite;
 }
 
 @keyframes gradeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" -200, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 150, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .width {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
     animation: widthAnimation 7s infinite;
 }
 
 @keyframes widthAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 25, "slnt" 0, "XOPQ" 27, "YOPQ" 100, "XTRA" 500, "YTUC" 500, "YTLC" 500, "YTAS" 649, "YTDE" 100, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 25, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 100, "XTRA" 500 "YTUC" 500, "YTLC" 500, "YTAS" 649, "YTDE" 100, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 151, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .slant {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: slantAnimation 7s infinite;
 }
 
 @keyframes slantAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" -10, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    
+}
+
+.parametricThickStroke {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    animation: parametricThickStrokeAnimation 7s infinite;
+}
+
+@keyframes parametricThickStrokeAnimation {
+    0%, 100%{
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 27, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+    }
+    50%{
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 175, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .parametricThinStroke {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: parametricThinStrokeAnimation 7s infinite;
 }
 
 @keyframes parametricThinStrokeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 25, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 135, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .parametricCounterWidth {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: parametricCounterWidthAnimation 7s infinite;
 }
 
 @keyframes parametricCounterWidthAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 603, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .parametricUppercaseHeight {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: parametricUppercaseHeightAnimation 7s infinite;
 }
 
 @keyframes parametricUppercaseHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 760, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .parametricLowercaseHeight {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: parametricLowercaseHeightAnimation 7s infinite;
 }
 
 @keyframes parametricLowercaseHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 570, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .parametricAscenderHeight {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: parametricAscenderHeightAnimation 7s infinite;
 }
 
 @keyframes parametricAscenderHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 603, "YTUC" 528, "YTLC" 416, "YTAS" 854, "YTDE" 305, "YTFI" 560;
     }
     
 }
 
 .parametricDescenderDepth {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: parametricDescenderDepthAnimation 7s infinite;
 }
 
 @keyframes parametricDescenderDepthAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -98, "YTFI" 560;
     }
     
 }
 
 .parametricFigureHeight {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
-    animation: weightAnimation 7s infinite;
+    animation: parametricFigureHeightAnimation 7s infinite;
 }
 
 @keyframes parametricFigureHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" -200, "wdth" 25, "slnt" -10, "XOPQ" 27, "YOPQ" 25, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 150, "wdth" 151, "slnt" 0, "XOPQ" 175, "YOPQ" 135, "XTRA" 603 "YTUC" 760, "YTLC" 570, "YTAS" 854, "YTDE" -98, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 788;
     }
     
 }
@@ -303,7 +322,7 @@ h1{
     font-family: 'Roboto Flex', sans-serif;
 }
 
-h4{
+h3{
     font-size:400px;
     font-weight:20; 
     text-align: center;
