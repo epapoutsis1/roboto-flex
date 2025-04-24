@@ -18,12 +18,19 @@ html, body {
 }
 
 /* how the page wrapper will appear on mobile */
-.page-wrapper{
+.page-wrapper {
     /* where to change the width of the columns on desktop view */
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
     text-align:left;
 }
+#variation {
+    grid-area: v;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    }
+
 /* typographic styling for mobile */
 
 @media only screen and (max-width:800px){
@@ -37,7 +44,7 @@ html, body {
     }
 }
 
-.variations h4 {
+.variation h4 {
     margin: 10px 0; /* Reduce vertical spacing between elements */
     font-size: 100px; /* Keep the font size consistent */
     text-align: center; /* Center-align the text */
@@ -60,14 +67,14 @@ grid-template-areas:
     margin: 0 auto; /* Center it horizontally if needed */
     padding: 20px; /* Add padding for spacing */
     width: 100%; /* Ensure it spans the full width */
-    text-align: center; /* Center-align the text */
+    text-align: left; /* Center-align the text */
 }
 
 #history {
 grid-area: h;
 }
 
-#variations{
+#variation {
 grid-area: v;
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -79,7 +86,7 @@ grid-area: a;
 }
 }
 /* CSS for the footer */
-footer{
+footer {
     background-color: rgb(199, 30, 143);
     font-family: 'Roboto Flex', sans-serif;
     height:100px;
@@ -113,7 +120,6 @@ footer{
     font-family: "Roboto Flex";
     font-size: 100px;
     text-align: center;
-    color:red;
     animation: weightAnimation 7s infinite;
 }
 
