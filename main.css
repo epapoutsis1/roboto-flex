@@ -22,13 +22,14 @@ html, body {
     /* where to change the width of the columns on desktop view */
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
-    text-align:left;
+    text-align:center;
 }
 #variation {
     grid-area: v;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    text-align:left;
     }
 
 /* typographic styling for mobile */
@@ -83,6 +84,7 @@ grid-template-rows: auto;
 
 #alphabet {
 grid-area: a;
+text-align: center;
 }
 }
 /* CSS for the footer */
