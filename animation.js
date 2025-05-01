@@ -74,3 +74,50 @@ document.addEventListener('click', (e) => {
   }, 600); // Match the duration of the ripple animation
 });
 
+document.addEventListener('click', (e) => {
+  // Create a ripple element
+  const ripple = document.createElement('div');
+  ripple.className = 'ripple';
+
+  // Randomize ripple color
+  const colors = ['rgba(0, 255, 179, 0.5)', 'rgba(255, 0, 179, 0.5)', 'rgba(0, 0, 255, 0.5)'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  ripple.style.backgroundColor = randomColor;
+
+  // Set the position of the ripple relative to the viewport
+  ripple.style.top = `${e.clientY - 25}px`; // Center the ripple vertically
+  ripple.style.left = `${e.clientX - 25}px`; // Center the ripple horizontally
+
+  // Append the ripple to the body
+  document.body.appendChild(ripple);
+
+  // Remove the ripple after the animation ends
+  setTimeout(() => {
+      ripple.remove();
+  }, 600); // Match the duration of the ripple animation
+});
+
+const hero = document.querySelector('.hero');
+const particleContainer = document.createElement('div');
+particleContainer.className = 'particle-container';
+hero.appendChild(particleContainer);
+
+for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.top = `${Math.random() * 100}%`;
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    particleContainer.appendChild(particle);
+}
+
+// Initialize the custom cursor position off-screen
+const cursor = document.getElementById('cursor');
+cursor.style.top = '-50px';
+cursor.style.left = '-50px';
+
+// Update the cursor position on mousemove
+document.addEventListener('mousemove', (e) => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+});

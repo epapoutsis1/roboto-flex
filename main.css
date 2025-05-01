@@ -32,6 +32,66 @@ html, body {
     text-align:left;
     }
 
+    .hero {
+        position: relative;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, rgba(0, 255, 179, 0.2), rgba(0, 0, 255, 0.2), rgba(255, 0, 179, 0.2)); /* Gradient background */
+        background-size: 200% 200%;
+        animation: gradientMove 8s infinite linear; /* Animate the gradient */
+        overflow: hidden;
+    }
+    
+    .hero h3 {
+        position: relative;
+        z-index: 2; /* Ensure text is above the background */
+        color: white;
+        text-shadow: 0 0 15px rgba(0, 255, 179, 0.8), 0 0 30px rgba(0, 255, 179, 0.5); /* Neon glow */
+        margin: 0;
+    }
+
+    #history {
+        position: static; /* Ensure it stays in its default position */
+        margin: 0 auto; /* Center it horizontally */
+        padding: 20px; /* Add padding for spacing */
+        width: 60%; /* Limit the width for better readability */
+        max-width: 800px; /* Ensure it doesn't get too wide on large screens */
+        text-align: left; /* Align text to the left */
+        line-height: 1.8; /* Increase line height for better readability */
+        font-size: 1.2rem; /* Adjust font size for desktop */
+        color: #E2E2E2; /* Light text color for contrast */
+    }
+    
+    /* Responsive adjustments for mobile */
+    @media only screen and (max-width: 768px) {
+        #history {
+            width: 90%; /* Use more width on smaller screens */
+            font-size: 1rem; /* Adjust font size for mobile */
+            line-height: 1.6; /* Slightly reduce line height */
+        }
+    }
+
+    /* Gradient animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    .hero h3 {
+        font-size: 5rem; /* Adjust font size for smaller screens */
+    }
+}
 /* typographic styling for mobile */
 
 @media only screen and (max-width:800px){
@@ -75,6 +135,37 @@ grid-template-areas:
 grid-area: h;
 }
 
+#history h1,
+#alphabet h1 {
+    text-align: left; /* Align headers to the left */
+    font-size: 2rem; /* Adjust font size for better readability */
+    margin-bottom: 10px; /* Add spacing below the header */
+    color: #E2E2E2; /* Ensure the header color matches the body text */
+    font-weight: bold; /* Make the headers stand out */
+}
+
+#history p,
+#alphabet p {
+    text-align: left; /* Ensure body text remains left-aligned */
+    line-height: 1.8; /* Maintain good readability */
+    font-size: 1.2rem; /* Adjust font size for desktop */
+    color: #E2E2E2; /* Light text color for contrast */
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    #history h1,
+    #alphabet h1 {
+        font-size: 1.5rem; /* Adjust header size for smaller screens */
+    }
+
+    #history p,
+    #alphabet p {
+        font-size: 1rem; /* Adjust body text size for smaller screens */
+        line-height: 1.6; /* Slightly reduce line height */
+    }
+}
+
 #variation {
 grid-area: v;
 display: grid;
@@ -87,6 +178,113 @@ grid-area: a;
 text-align: center;
 }
 }
+#alphabet {
+    grid-area: a;
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Add padding for spacing */
+    width: 60%; /* Limit the width for better readability */
+    max-width: 800px; /* Ensure it doesn't get too wide on large screens */
+    line-height: 1.8; /* Increase line height for better readability */
+    font-size: 1.2rem; /* Adjust font size for desktop */
+    color: #E2E2E2; /* Light text color for contrast */
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    #alphabet {
+        width: 90%; /* Use more width on smaller screens */
+        font-size: 1rem; /* Adjust font size for mobile */
+        line-height: 1.6; /* Slightly reduce line height */
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 179, 0.2), rgba(0, 0, 255, 0.2), rgba(255, 0, 179, 0.2));
+    background-size: 200% 200%;
+    animation: gradientMove 8s infinite linear;
+    z-index: 1;
+    opacity: 0.8; /* Subtle overlay */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Add hover effect for interactive elements */
+a:hover, button:hover {
+    cursor: none; /* Hide default cursor */
+}
+
+.variable-font {
+    font-weight: 1;
+    height: 100vh;
+    font-size: 10em;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    text-align: center;
+    font-variation-settings: "wght" 40, "wdth" 0, "XXXX" 1;
+    transition: font-weight 500ms, font-variation-settings 3s;
+}
+
+.variable-font:hover {
+    font-weight: 500;
+    font-size: 7em;
+    font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
+    color: rgba(0, 255, 179, 0.8); /* Change color on hover */
+}
+
+@media only screen and (max-width: 768px) {
+    .hero h3 {
+        font-size: 5rem; /* Adjust font size for smaller screens */
+    }
+
+    #cursor {
+        width: 20px;
+        height: 20px;
+    }
+
+    .variable-font {
+        font-size: 5em; /* Adjust font size for smaller screens */
+    }
+}
+
+#cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 255, 179, 0.8); /* Neon green */
+    border-radius: 50%; /* Circular shape */
+    box-shadow: 0 0 15px rgba(0, 255, 179, 0.8), 0 0 30px rgba(0, 255, 179, 0.5); /* Neon glow effect */
+    pointer-events: none; /* Prevents interference with mouse events */
+    z-index: 9999; /* Ensures it appears above all other elements */
+    transform: translate(-50%, -50%) scale(1); /* Centers the cursor on the mouse pointer */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Scale the cursor on hover */
+a:hover ~ #cursor, button:hover ~ #cursor {
+    transform: translate(-50%, -50%) scale(1.5); /* Enlarge the cursor */
+    background-color: rgba(255, 0, 179, 0.8); /* Change color */
+}
+
+
+
 /* CSS for the footer */
 footer {
     background-color: rgb(199, 30, 143);
@@ -100,6 +298,7 @@ footer {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 10px;
 }
+
 
 .opticalSize {
     font-family: 'Roboto Flex', sans-serif;
