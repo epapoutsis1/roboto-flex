@@ -277,6 +277,19 @@ a:hover, button:hover {
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+#cursor.blink {
+    animation: blinkEffect 0.3s ease-out; /* Apply the blink animation */
+}
+
+@keyframes blinkEffect {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+}
+
 /* Scale the cursor on hover */
 a:hover ~ #cursor, button:hover ~ #cursor {
     transform: translate(-50%, -50%) scale(1.5); /* Enlarge the cursor */
