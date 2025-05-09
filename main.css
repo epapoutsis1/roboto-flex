@@ -300,12 +300,34 @@ a:hover ~ #cursor, button:hover ~ #cursor {
 
 /* CSS for the footer */
 footer {
-    background-color: rgb(199, 30, 143);
+    background-color: rgb(58, 58, 58);
     font-family: 'Roboto Flex', sans-serif;
-    height:100px;
-    width:auto;
+    height: 100px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
 }
 
+footer a {
+    color: #00acee; /* LinkedIn blue */
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer svg {
+    margin-right: 5px; /* Add spacing between the icon and text */
+    fill: #00acee; /* LinkedIn blue */
+}
 /* variable font animation */
 .hero {
     font-family: 'Roboto Flex', sans-serif;
@@ -512,7 +534,7 @@ footer {
         font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -98, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -203, "YTFI" 560;
     }
     
 }
