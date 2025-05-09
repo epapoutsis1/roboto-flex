@@ -356,10 +356,10 @@ footer {
 
 @keyframes gradeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" -200, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 150, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 300, "GRAD" 150, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
     }
     
 }
