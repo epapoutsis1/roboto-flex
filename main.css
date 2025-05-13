@@ -17,19 +17,30 @@ html, body {
     overflow:auto;
 }
 
+h1 {
+    text-align: left; /* Align headers to the left */
+    font-size: 2rem; /* Adjust font size for better readability */
+    margin-bottom: 10px; /* Add spacing below the header */
+    color: #E2E2E2; /* Ensure the header color matches the body text */
+    font-weight: bold; /* Make the headers stand out */
+}
+
 /* how the page wrapper will appear on mobile */
 .page-wrapper {
     /* where to change the width of the columns on desktop view */
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
-    text-align:center;
+    text-align:left;
 }
-#variation {
-    grid-area: v;
-    display: grid;
+
+#variations {
+ 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     text-align:left;
+    line-height: 1.8; /* Increase line height for better readability */
+    font-size: 1.2rem; /* Adjust font size for desktop */
+    color: #E2E2E2; /* Light text color for contrast */
     }
 
     .hero {
@@ -136,7 +147,8 @@ grid-area: h;
 }
 
 #history h1,
-#alphabet h1 {
+#alphabet h1,
+#variations h1 {
     text-align: left; /* Align headers to the left */
     font-size: 2rem; /* Adjust font size for better readability */
     margin-bottom: 10px; /* Add spacing below the header */
@@ -153,10 +165,13 @@ grid-area: h;
 }
 
 /* Responsive adjustments for mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     #history h1,
-    #alphabet h1 {
+    #alphabet h1,
+    #variations h1 {
         font-size: 1.5rem; /* Adjust header size for smaller screens */
+        font-weight: bold; /* Make the headers stand out */
+        text-align:left;
     }
 
     #history p,
@@ -173,11 +188,62 @@ grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 }
 
+/* Align breakdown heading with history and alphabet */
+#variations {
+    grid-area: v;
+    text-align: left;
+    margin: 0 auto;
+    padding: 20px;
+    width: 60%;
+    max-width: 800px;
+    color: #E2E2E2;
+}
+
+@media only screen and (max-width: 768px) {
+    #variations {
+        width: 90%;
+        max-width: 100vw;
+        padding: 10px 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+    #variations h1 {
+        font-size: 1.5rem;
+        text-align: left;
+        white-space: normal; /* allow wrapping if needed */
+        overflow: visible;
+        text-overflow: unset;
+        margin-bottom: 10px;
+    }
+}
+
+#variations h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #E2E2E2;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+}
+@media only screen and (max-width: 400px) {
+    #variations h1 {
+        font-size: 1.1rem;
+    }
+}
+
+
+
 #alphabet {
 grid-area: a;
 text-align: center;
 }
 }
+
 #alphabet {
     grid-area: a;
     text-align: left; /* Align text to the left */
@@ -296,7 +362,16 @@ a:hover ~ #cursor, button:hover ~ #cursor {
     background-color: rgba(255, 0, 179, 0.8); /* Change color */
 }
 
-
+.page-wraper {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 60%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 0 0;
+}
 
 /* CSS for the footer */
 footer {
@@ -334,7 +409,6 @@ footer svg {
     font-size: 10px;
 }
 
-
 .opticalSize {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 100px;
@@ -344,10 +418,10 @@ footer svg {
 
 @keyframes opticalSizeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 8, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 8, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 144, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC"416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 144, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC"416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -361,10 +435,10 @@ footer svg {
 
 @keyframes weightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 16, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 16, "wght" 1000, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 16, "wght" 1000, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -378,10 +452,10 @@ footer svg {
 
 @keyframes gradeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 100, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 300, "GRAD" 150, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 300, "GRAD" 150, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -395,10 +469,10 @@ footer svg {
 
 @keyframes widthAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 25, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 25, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 151, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 500, "GRAD" 0, "wdth" 151, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -412,10 +486,10 @@ footer svg {
 
 @keyframes slantAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" -10, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" -10, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -429,10 +503,10 @@ footer svg {
 
 @keyframes parametricThickStrokeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 27, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 27, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 175, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 175, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -446,10 +520,10 @@ footer svg {
 
 @keyframes parametricThinStrokeAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 25, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 25, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 135, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 135, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -463,10 +537,10 @@ footer svg {
 
 @keyframes parametricCounterWidthAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 603, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 603, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -480,10 +554,10 @@ footer svg {
 
 @keyframes parametricUppercaseHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 760, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 760, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -497,10 +571,10 @@ footer svg {
 
 @keyframes parametricLowercaseHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 570, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 300, "YTUC" 528, "YTLC" 570, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -514,10 +588,10 @@ footer svg {
 
 @keyframes parametricAscenderHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 603, "YTUC" 528, "YTLC" 416, "YTAS" 854, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 603, "YTUC" 528, "YTLC" 416, "YTAS" 854, "YTDE" -305, "YTFI" 560;
     }
     
 }
@@ -531,7 +605,7 @@ footer svg {
 
 @keyframes parametricDescenderDepthAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
         font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -203, "YTFI" 560;
@@ -548,10 +622,10 @@ footer svg {
 
 @keyframes parametricFigureHeightAnimation {
     0%, 100%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 560;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 560;
     }
     50%{
-        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" 305, "YTFI" 788;
+        font-variation-settings: "opsz" 100, "wght" 150, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 100, "YOPQ" 100, "XTRA" 323, "YTUC" 528, "YTLC" 416, "YTAS" 649, "YTDE" -305, "YTFI" 788;
     }
     
 }
